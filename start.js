@@ -31,11 +31,8 @@ bot.on('message', async message => {
 		})
 		.catch(console.log)
 	}
-		else{
-			message.reply("You need to join a Voice Channel first!")
-		}
-	if (command =="leave"){
-		voiceChannel.leave()
+	if (command === "leave"){
+		bot.voiceChannel.leave()
 	}
 })
 
