@@ -1,0 +1,25 @@
+{
+  "name": "clownbot",
+  "version": "0.0.0",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "ffmpeg": "0.0.4",
+    "node": "^9.8.0"
+  },
+  "description": "A LoL Soundboard Bot.",
+  "main": "start.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luckeyz",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randomcalob/ClownBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/randomcalob/ClownBot/issues"
+  },
+  "homepage": "https://github.com/randomcalob/ClownBot#readme"
+}
