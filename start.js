@@ -4,6 +4,7 @@ const prefix = settings.prefix
 const token = settings.token
 const ffmpeg = require("ffmpeg")
 const opus = require("opusscript")
+const fs = require('fs')
 const bot = new Discord.Client({disableEveryone: true})
 
 bot.on("ready", async () => {
@@ -23,10 +24,9 @@ bot.on('message', async message => {
 
 
 
-	if (command === "hehe") {
-		message.channel.send('heehee')
+	if (command === "ping") {
+		message.channel.send('pong')
 	}
-
 
 
 	if (command === "disappear"){
@@ -40,15 +40,38 @@ bot.on('message', async message => {
 	}
 
 	if (command === "dawae"){
-		meme = "http://leagueoflegends.wikia.com/wiki/File:Shaco.attack3.ogg"
+		meme = "./dawae.mp3"
 		playSound(meme,message)
 	}
 	if (command === "scam"){
-		meme = "http://leagueoflegends.wikia.com/wiki/File:Shaco.attack3.ogg"
+		meme = "./cam.mp3"
+		playSound(meme,message)
+	}
+	if (command === "fun"){
+		meme = "https://vignette.wikia.nocookie.net/leagueoflegends/images/b/bb/Shaco.attack2.ogg/revision/latest?cb=20121126233707"
 		playSound(meme,message)
 	}
 
-
+	if (command === "magictrick"){
+		meme = "https://vignette.wikia.nocookie.net/leagueoflegends/images/5/55/Shaco_Select.ogg/revision/latest?cb=20121126233706"
+		playSound(meme,message)
+	}
+	if (command === "backstab"){
+		meme = "https://vignette.wikia.nocookie.net/leagueoflegends/images/8/84/Shaco.attack1.ogg/revision/latest?cb=20121126233707"
+		playSound(meme,message)
+	}
+	if (command === "nowyouseeme"){
+		meme = "https://vignette.wikia.nocookie.net/leagueoflegends/images/c/c4/Shaco.attack6.ogg/revision/latest?cb=20121126233709"
+		playSound(meme,message)
+	}
+	if (command === "hehe"){
+		meme = "https://vignette.wikia.nocookie.net/leagueoflegends/images/9/94/Shaco.laugh3.ogg/revision/latest?cb=20140205171942"
+		playSound(meme,message)
+	}
+	if (command === "serious"){
+		meme = "https://vignette.wikia.nocookie.net/leagueoflegends/images/1/11/Shaco.taunt.ogg/revision/latest?cb=20121126233710"
+		playSound(meme,message)
+	}
 	// if (command === "leave"){
 	// 	message.guild.me.voiceChannel.leave()
 	// }
