@@ -16,7 +16,8 @@ bot.on("ready", async () => {
 	
 })
 bot.on('message', async message => {
-	console.log(message.content)
+	if (!message.guild) return
+
 	let msg = message.content.split(" ")
 	let command = msg[0]
 	if (!command.startsWith(prefix)) return
@@ -24,7 +25,18 @@ bot.on('message', async message => {
 		console.log(command)
 	if (command === "hehe")
 		message.channel.send('heehee')
-		
+	if (command === "come"){
+		message.member.voiceChannel.join().then(connection => {
+			message.reply("Infiltration Complete.")
+		})
+		.catch(console.log)
+	}
+		else{
+			message.reply("You need to join a voiceChannel first!")
+		}
+	if (command =="leave"){
+		voiceChannel.leave()
+	}
 })
 
 bot.login(token)
