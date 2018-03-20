@@ -5,7 +5,8 @@
     "discord.js": "^11.3.2",
     "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^3.2.2-3",
-    "node": "^9.8.0"
+    "node": "^9.8.0",
+    "opusscript": "0.0.6"
   },
   "description": "A LoL Soundboard Bot.",
   "main": "start.js",
