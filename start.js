@@ -17,10 +17,6 @@ bot.on("ready", async () => {
 })
 bot.on('message', async message => {
 	console.log(message.content)
-	if (message.content === '<@&390981978989658124> has big gae'){
-		message.channel.send('yes')
-	}
-
 	let msg = message.content.split(" ")
 	let command = msg[0]
 	if (!command.startsWith(prefix)) return
