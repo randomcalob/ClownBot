@@ -20,8 +20,15 @@ bot.on('message', async message => {
 	if (!command.startsWith(prefix)) {
 		return
 	}
-	command = command.substr(3)
+	command = command.substring(3)
+	console.log(command)
+	// if (command === "champion") {
+	// 	champion(message,msg[1],msg[2])
+	// }
 
+	if (command === "help") {
+		message.reply("Current commands are ping, disappear, jokes, dawae, scam, fun, magictrick, backstab, nowyouseeme, hehe, serious")
+	}
 
 
 	if (command === "ping") {
@@ -35,7 +42,7 @@ bot.on('message', async message => {
 	}
 
 	if (command === "jokes"){
-		meme = "http://leagueoflegends.wikia.com/wiki/File:Shaco.attack3.ogg"
+		meme = "https://vignette.wikia.nocookie.net/leagueoflegends/images/9/90/Shaco.attack3.ogg"
 		playSound(meme,message)
 	}
 
@@ -93,4 +100,10 @@ function playSound(source,message){
 	else{
 		message.reply("Get in a fucking channel")
 	}
+}
+
+function champion(message,type,champion){
+	console.log(type)
+
+	console.log(champion)
 }
